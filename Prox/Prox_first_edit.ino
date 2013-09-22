@@ -26,22 +26,22 @@ int irRight = irDetect(2, 3, 38000); // Check for object on right
 
 if((irLeft == 0) && (irRight == 0)) // If both sides detect 
 { 
-maneuver(-100, -100, 10); // Backward 20 milliseconds 
+maneuver(-200, -200, 20); // Backward 20 milliseconds 
 } 
 
 else if(irLeft == 0) // If only left side detects 
 { 
-maneuver(100, -100, 10); // Right for 20 ms 
+maneuver(200, -200, 20); // Right for 20 ms 
 } 
 
 else if(irRight == 0) // If only right side detects 
 { 
-maneuver(-100, 100, 10); // Left for 20 ms 
+maneuver(-200, 200, 20); // Left for 20 ms 
 } 
 
 else // Otherwise, no IR detects 
 { 
-maneuver(100, 100, 10); // Forward 20 ms 
+maneuver(200, 200, 20); // Forward 20 ms 
 
 } 
 } 
